@@ -1,0 +1,101 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal */
+.auth-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Panneau gauche avec image */
+.left-panel {
+    flex: 1;
+    position: relative;
+    background-color: #001b44; /* Couleur de secours */
+    overflow: hidden;
+}
+
+/* Style de l'image pour qu'elle occupe tout l'espace disponible */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Important pour couvrir correctement */
+    display: block;
+}
+
+/* Panneau droit (bleu clair) */
+.right-panel {
+    width: 40%;
+    background-color: #89cff0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Formulaire de connexion */
+.login-form {
+    width: 100%;
+    max-width: 320px;
+}
+
+.sign-in-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #001b44;
+    font-weight: bold;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.sign-in-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #001b44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.sign-in-button:hover {
+    background-color: #002d72;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+    }
+    
+    .left-panel {
+        height: 40vh;
+    }
+    
+    .right-panel {
+        width: 100%;
+        height: 60vh;
+    }
+}
